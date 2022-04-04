@@ -5,7 +5,7 @@
  * Description: This plugin is counter websites.
  * Version: 1.0.1
  * Author: Grzegorz Kalmus
- * Author URI: ####
+ * Author URI: #
  */
 
 
