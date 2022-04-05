@@ -2070,6 +2070,7 @@ abstract class Controls_Stack extends Base_Object {
 	 * @deprecated 3.1.0 Use `Controls_Stack::register_controls()` instead
 	 */
 	protected function _register_controls() {
+		Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function( __METHOD__, '3.1.0', __CLASS__ . '::register_controls()' );
 
 		$this->register_controls();
 	}
@@ -2273,6 +2274,7 @@ abstract class Controls_Stack extends Base_Object {
 		// TODO: This is for backwards compatibility starting from 2.9.0
 		// This `if` statement should be removed when the method is removed
 		if ( $this->has_own_method( '_register_controls', self::class ) ) {
+			Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function( '_register_controls', '3.1.0', __CLASS__ . '::register_controls()' );
 
 			$this->_register_controls();
 		} else {
