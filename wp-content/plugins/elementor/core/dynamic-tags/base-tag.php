@@ -172,7 +172,7 @@ abstract class Base_Tag extends Controls_Stack {
 		] );
 
 		if ( $this->has_own_method( '_register_controls' ) ) {
-
+            $this->_register_controls();
 		} else {
 			$this->register_controls();
 		}
